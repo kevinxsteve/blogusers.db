@@ -86,8 +86,8 @@ SELECT title, created_at, name, tagname FROM posts
 JOIN authors using (author_id)
 JOIN tagsposts using (post_id)
 JOIN tags using (tag_id);
-# Querying the title, tagname
 ```
+# Querying the title, tagname
 ```SQL
 select title,tagname from tagsposts
 join tags using (tag_id)
