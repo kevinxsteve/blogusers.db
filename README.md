@@ -9,7 +9,8 @@ User Blog
 
 where to do it:
 https://mermaid-js.github.io/mermaid-live-editor/#/
-# code:
+
+
 erDiagram
 Author |{--o{ Post:has    
 Post |{--o{ Tag: may_have    
