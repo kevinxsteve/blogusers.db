@@ -10,7 +10,7 @@ User Blog
 where to do it:
 https://mermaid-js.github.io/mermaid-live-editor/#/
 
-```
+```SQL
 erDiagram
 Author |{--o{ Post:has    
 Post |{--o{ Tag: may_have    
