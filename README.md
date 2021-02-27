@@ -12,7 +12,7 @@ https://mermaid-js.github.io/mermaid-live-editor/#/
 
 ```ER
 erDiagram
-Author |{--o{ Post:has    
+Author |{--o{ Post: has    
 Post |{--o{ Tag: may_have    
     Author{
         string name
