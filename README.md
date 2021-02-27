@@ -1,5 +1,22 @@
 # blogusers.db
 A database of Entities Posts, Author, Tags, Tagsposts for a Blog
+User Blog
+
+- Name, Email, Creator | Author
+- Title, CreatedAt, Tags
+
+## ER
+
+https://mermaid-js.github.io/mermaid-live-editor/#/
+
+
+## SQL Model
+
+Single SQL file
+
+
+
+
 ```SQL
 CREATE TABLE authors (
   author_id INTEGER PRIMARY KEY, name TEXT NOT NULL, 
