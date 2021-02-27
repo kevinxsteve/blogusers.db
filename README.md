@@ -24,56 +24,15 @@ CREATE TABLE tagsposts (
 );
 ```
 ```SQL
-INSERT INTO authors (name, email) 
-VALUES 
-  ("Henri", "henri@hello.de"), 
-  ("Adrian", "adrian@hello.de"), 
-  ("Filippo", "filippo@hello.de"), 
-  ("Nick", "nick@hello.de");
-INSERT INTO posts (title, created_at, author_id) 
-VALUES 
-  (
-    "Lorem", 
-    Date("now"), 
-    1
-  ), 
-  (
-    "Ipsum", 
-    Date("now"), 
-    2
-  ), 
-  (
-    "Sit", 
-    Date("now"), 
-    3
-  ), 
-  (
-    "Dolor", 
-    Date("now"), 
-    4
-  );
-INSERT INTO tags(tagname) 
-VALUES 
-  ("DYI"), 
-  ("LOL"), 
-  ("Cooking"), 
-  ("Selfmade");
-INSERT INTO tagsposts (tag_id, post_id) 
-VALUES 
-  (1, 1), 
-  (2, 1), 
-  (1, 2), 
-  (3, 2), 
-  (3, 3), 
-  (4, 4);
-SELECT 
-  title, 
-  created_at, 
-  name, 
-  tagname 
-FROM 
-  posts 
-  INNER JOIN authors ON posts.author_id = authors.author_id 
-  INNER JOIN tagsposts ON tagsposts.post_id = posts.post_id 
-  INNER JOIN tags ON tagsposts.tag_id = tags.tag_id;
+INSERT INTO authors (name, email) VALUES ("Henri", "henri@hello.de"), ("Adrian", "adrian@hello.de"), ("Filippo", "filippo@hello.de"), ("Nick", "nick@hello.de");
+INSERT INTO posts (title, created_at, author_id) VALUES ("Lorem", Date("now"), 1), ("Ipsum", Date("now"), 2), ("Sit", Date("now"), 3), ("Dolor", Date("now"), 4);
+INSERT INTO tags(tagname) VALUES ("DYI"), ("LOL"), ("Cooking"), ("Selfmade");
+INSERT INTO tagsposts (tag_id, post_id) VALUES (1,1), (2,1), (1,2), (3,2), (3,3), (4,4);
+```
+
+```SQL
+SELECT title, created_at, name, tagname FROM posts
+INNER JOIN authors ON posts.author_id = authors.author_id
+INNER JOIN tagsposts ON tagsposts.post_id = posts.post_id
+INNER JOIN tags ON tagsposts.tag_id = tags.tag_id;
 ```
