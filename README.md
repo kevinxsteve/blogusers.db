@@ -73,6 +73,13 @@ INNER JOIN authors ON posts.author_id = authors.author_id
 INNER JOIN tagsposts ON tagsposts.post_id = posts.post_id
 INNER JOIN tags ON tagsposts.tag_id = tags.tag_id;
 ```
+or
+```SQL
+SELECT title, created_at, name, tagname FROM posts
+INNER JOIN authors ON posts.author_id = authors.author_id
+INNER JOIN tagsposts ON tagsposts.post_id = posts.post_id
+INNER JOIN tags ON tagsposts.tag_id = tags.tag_id;
+```
 # Querying the title, tagname
 ```SQL
 select title,tagname from tagsposts
