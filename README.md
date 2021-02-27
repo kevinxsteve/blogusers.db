@@ -75,10 +75,10 @@ INNER JOIN tags ON tagsposts.tag_id = tags.tag_id;
 ```
 or another way would be
 ```SQL
-SELECT title, created_at, name, tagname FROM posts
-INNER JOIN authors ON posts.author_id = authors.author_id
-INNER JOIN tagsposts ON tagsposts.post_id = posts.post_id
-INNER JOIN tags ON tagsposts.tag_id = tags.tag_id;
+select title, tagname, name, created_at from tagsposts
+inner join tags on tagsposts.tag_id = tags.tag_id
+join posts on tagsposts.post_id = posts.post_id
+join authors on posts.author_id = authors.author_id;
 ```
 # Querying the title, tagname
 ```SQL
