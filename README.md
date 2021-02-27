@@ -9,6 +9,20 @@ User Blog
 
 where to do it:
 https://mermaid-js.github.io/mermaid-live-editor/#/
+erDiagram
+Author |{--o{ Post:has    
+Post |{--o{ Tag: may_have    
+    Author{
+        string name
+        string email
+    }
+    Post{
+    string title
+    int createdAt
+    }
+    Tag{
+    string tagname
+    }
 
 [![](https://mermaid.ink/img/eyJjb2RlIjoiZXJEaWFncmFtXG5BdXRob3IgfHstLW97IFBvc3Q6aGFzICAgIFxuUG9zdCB8ey0tb3sgVGFnOiBtYXlfaGF2ZSAgICBcbiAgICBBdXRob3J7XG4gICAgICAgIHN0cmluZyBuYW1lXG4gICAgICAgIHN0cmluZyBlbWFpbFxuICAgIH1cbiAgICBQb3N0e1xuICAgIHN0cmluZyB0aXRsZVxuICAgIGludCBjcmVhdGVkQXRcbiAgICB9XG4gICAgVGFne1xuICAgIHN0cmluZyB0YWduYW1lXG4gICAgfSIsIm1lcm1haWQiOnt9LCJ1cGRhdGVFZGl0b3IiOmZhbHNlfQ)](https://mermaid-js.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZXJEaWFncmFtXG5BdXRob3IgfHstLW97IFBvc3Q6aGFzICAgIFxuUG9zdCB8ey0tb3sgVGFnOiBtYXlfaGF2ZSAgICBcbiAgICBBdXRob3J7XG4gICAgICAgIHN0cmluZyBuYW1lXG4gICAgICAgIHN0cmluZyBlbWFpbFxuICAgIH1cbiAgICBQb3N0e1xuICAgIHN0cmluZyB0aXRsZVxuICAgIGludCBjcmVhdGVkQXRcbiAgICB9XG4gICAgVGFne1xuICAgIHN0cmluZyB0YWduYW1lXG4gICAgfSIsIm1lcm1haWQiOnt9LCJ1cGRhdGVFZGl0b3IiOmZhbHNlfQ)
 
