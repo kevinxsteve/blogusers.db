@@ -66,19 +66,21 @@ INSERT INTO posts (title, created_at, author_id) VALUES ("Lorem", Date("now"), 1
 INSERT INTO tags(tagname) VALUES ("DYI"), ("LOL"), ("Cooking"), ("Selfmade");
 INSERT INTO tagsposts (tag_id, post_id) VALUES (1,1), (2,1), (1,2), (3,2), (3,3), (4,4);
 ```
-
+# Querying the title, created_at, name, tagname
 ```SQL
 SELECT title, created_at, name, tagname FROM posts
 INNER JOIN authors ON posts.author_id = authors.author_id
 INNER JOIN tagsposts ON tagsposts.post_id = posts.post_id
 INNER JOIN tags ON tagsposts.tag_id = tags.tag_id;
 ```
-or 
+# Querying the title, tagname
 ```SQL
-/*select title,tagname from tagsposts
+select title,tagname from tagsposts
 join tags using (tag_id)
 join posts using (post_id);
-*/
+```
+or another way
+```SQL
 select title, tagname from tagsposts
 inner join tags on tagsposts.tag_id = tags.tag_id
 join posts on tagsposts.post_id = posts.post_id;
