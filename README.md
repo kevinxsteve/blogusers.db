@@ -1,5 +1,5 @@
 # blogusers.db
-A database of Entities Posts, Author, Tags, Tagsposts for a Blog
+A database for a Blog consisting of entities (Posts, Author, Tags, Tagsposts)
 User Blog
 
 - Name, Email, Creator | Author
